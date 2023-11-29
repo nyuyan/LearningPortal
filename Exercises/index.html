@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-3-typeahead/4.0.2/bootstrap3-typeahead.min.js"></script>
+
+
+  <title>SOI Learning Portal</title>
+  <style>
+      .carousel-with-margin {
+      margin-bottom: 550px;
+    }
+  </style>
+</head>
+
+<body>
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-light bg-black">
+        <a class="navbar-brand text-white" href="#">SOI Learning Portal</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon bg-white"></span>
+        </button>
+        <div class="collapse navbar-collapse mt-2 " id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="px-3 nav-item active">
+                    <a class="nav-link text-white" href="#">About</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle text-white px-3" href="#" id="navbarDropdown" role="button"
+                        data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Courses
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">HTML</a>
+                        <a class="dropdown-item" href="#">CSS</a>
+                        <a class="dropdown-item" href="#">PHP</a>
+                        <a class="dropdown-item" href="#">JavaScript</a>
+                        <a class="dropdown-item" href="#">Python</a>
+                        <a class="dropdown-item" href="#">Java</a>
+                        <a class="dropdown-item" href="#">iOS</a>
+                        <a class="dropdown-item" href="#">React</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="px-3 nav-link text-white" href="#">Contact</a>
+                </li>
+            </ul>
+            <form class="d-flex ms-auto">
+              <div class="dropdown mt-1 ml-1">
+                <a class="btn btn-secondary rounded-circle position-relative" href="#" role="button"
+                  id="notificationDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <i class="fas fa-bell text-white"></i>
+                  <span class="notification-dot"></span>
+                </a>
+                <div class="dropdown-menu" aria-labelledby="notificationDropdown" style="width: 300px;">
+                  <a class="dropdown-item notification-title" href="#">
+                    <strong>Notifications</strong>
+                  </a>
+                  <a class="dropdown-item notification-item" href="#" style="padding: 10px; border-bottom: 1px solid #ddd;">
+                    <div class="notification-content" 
+                      style="display: flex; flex-direction: column; align-items: flex-start;">
+                      <div class="notification-description" style="margin-top: -5px;">
+                        <strong>John</strong> <br>likes your comment on Front-End<br> Development Frameworks
+                      </div>
+                      <div class="notification-timestamp" style="font-size: 12px; color: #6c757d; margin-top: 5px;">2 hours
+                        ago, 2:30PM</div>
+                    </div>
+                  </a>
+                  <a class="dropdown-item notification-item notification-item-unseen" href="#"
+                    style="padding: 10px; border-bottom: 1px solid #ddd; background-color: rgba(214, 216, 219, 0.9);">
+                    <div class="notification-content"
+                      style="display: flex; flex-direction: column; align-items: flex-start;">
+                      <div class="notification-description" style="margin-top: -5px;">
+                        <strong>Jane</strong> <br>mentioned you in a discussion
+                      </div>
+                      <div class="notification-timestamp" style="font-size: 12px; color: #6c757d; margin-top: 5px;">1 day
+                        ago, 11:30AM</div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+              
+              <div id="userStatus" class="mt-1 mr-2">
+                <a id="userIcon" class="btn btn-secondary rounded-circle position-relative">
+                  <i class="fas fa-user text-white"></i>
+                </a>
+              </div>
+                <div class="form-group">
+                  <input type="text" class="form-control" id="searchInput" placeholder="Search...">
+                </div>
+            </form>
+        </div>
+    </nav>
+    <div class="hero-banner bg-warning text-center py-1">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-7">
+            <h1 class="display-4 mt-4">
+              <b>Welcome to SOI Learning Portal</b>
+            </h1>
+            <p class="lead pt-3">
+              Expertly crafted courses that best fit your learning needs and preferences.
+            </p>
+            <a href="#" class="btn btn-dark">Browse Courses</a>
+            <a href="#" class="btn btn-light">Be an Instructor</a>
+          </div>
+          <div class="col-md-5 py-0 ">
+            <img src="image/teacher1.png" alt="Hero Image" class="img-fluid rounded" />
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <div class="container mt-4 mb-4 text-center">
+      <div class="row">
+        <div class="col-md-4">
+          <div class="d-flex flex-column align-items-center">
+            <i class="fas fa-book fa-2x"></i>
+            <div class="mt-2"><b>158 online courses</b><br>Enjoy a variety of fresh topics</div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="d-flex flex-column align-items-center">
+            <i class="fas fa-user fa-2x"></i>
+            <div class="mt-2"><b>Expert instruction</b><br>Find the right instructor for you</div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="d-flex flex-column align-items-center">
+            <i class="fas fa-clock fa-2x"></i>
+            <div class="mt-2"><b>Lifetime access</b><br>Learn on your schedule</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <div class="container mt-4 mb-4">
+      <h2 class="text-center">Featured Courses</h2>
+    </div>
+  
+  
+    <div id="carouselExampleIndicators" class="carousel slide bg-dark" data-bs-ride="carousel" data-bs-interval="2000">  
+      <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="container mt-4 mb-4">
+              <div class="row">
+                <div class="col-md-3">
+                  <div class="card">
+                    <img src="image/first.jpg" class="card-img-top" alt="Card Image 1"/>
+                    <div class="card-body">
+                      <h5 class="card-title">Introduction to HTML and CSS</h5>
+                      <p class="card-text"><i class="fas fa-clock"></i> 2hr 30mins</p>
+                      <a href="#" class="btn btn-primary">Learn More</a>
+                    </div>
+                    <div class="card-footer"><i class="fas fa-user"></i> Hannah Lim  <i class="fas fa-bookmark" data-bs-toggle="tooltip" data-bs-placement="top" title="Add to Bookmarks"></i></div>
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="card">
+                    <img src="image/seventh.jpg" class="card-img-top" alt="Card Image 2" />
+                    <div class="card-body">
+                      <h5 class="card-title">User Experience and Interface Design</h5>
+                      <p class="card-text"><i class="fas fa-clock"></i> 2hr 45mins</p>
+                      <a href="#" class="btn btn-primary">Learn More</a>
+                    </div>
+                    <div class="card-footer"><i class="fas fa-user"></i> Julia Lee <i class="fas fa-bookmark" data-bs-toggle="tooltip" data-bs-placement="top" title="Add to Bookmarks"></i></div>
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="card">
+                    <img src="image/app.jpg" class="card-img-top" alt="Card Image 3" />
+                    <div class="card-body">
+                      <h5 class="card-title">iOS App Development using Xcode and Swift</h5>
+                      <p class="card-text"><i class="fas fa-clock"></i> 4hr 30mins</p>
+                      <a href="#" class="btn btn-primary">Learn More</a>
+                    </div>
+                    <div class="card-footer"><i class="fas fa-user"></i> Ryan Low <i class="fas fa-bookmark" data-bs-toggle="tooltip" data-bs-placement="top" title="Add to Bookmarks"></i></div>
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="card">
+                    <img src="image/java.jpg" class="card-img-top" alt="Card Image 4" />
+                    <div class="card-body">
+                      <h5 class="card-title">Front-end JavaScript Frameworks</h5>
+                      <p class="card-text"><i class="fas fa-clock"></i> 3hr 45mins</p>
+                      <a href="#" class="btn btn-primary">Learn More</a>
+                    </div>
+                    <div class="card-footer"><i class="fas fa-user"></i> Azhar Kamar <i class="fas fa-bookmark" data-bs-toggle="tooltip" data-bs-placement="top" title="Add to Bookmarks"></i></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="container mt-4 mb-4">
+              <div class="row">
+                <div class="col-md-3">
+                  <div class="card">
+                    <img src="image/php.jpeg" class="card-img-top" alt="Card Image 1"/>
+                    <div class="card-body">
+                      <h5 class="card-title">Introduction to PHP and JavaScript</h5>
+                      <p class="card-text"><i class="fas fa-clock"></i> 1hr 30mins</p>
+                      <a href="#" class="btn btn-primary">Learn More</a>
+                    </div>
+                    <div class="card-footer"><i class="fas fa-user"></i> Joanne Lim  <i class="fas fa-bookmark" data-bs-toggle="tooltip" data-bs-placement="top" title="Add to Bookmarks"></i></div>
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="card">
+                    <img src="image/code.jpeg" class="card-img-top" alt="Card Image 2" />
+                    <div class="card-body">
+                      <h5 class="card-title">Any basic Coding and Analysis</h5>
+                      <p class="card-text"><i class="fas fa-clock"></i> 3hr 45mins</p>
+                      <a href="#" class="btn btn-primary">Learn More</a>
+                    </div>
+                    <div class="card-footer"><i class="fas fa-user"></i> Judia Lee <i class="fas fa-bookmark" data-bs-toggle="tooltip" data-bs-placement="top" title="Add to Bookmarks"></i></div>
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="card">
+                    <img src="image/design.jpeg" class="card-img-top" alt="Card Image 4" />
+                    <div class="card-body">
+                      <h5 class="card-title">Design & UI UX Knowledge</h5>
+                      <p class="card-text"><i class="fas fa-clock"></i> 4hr 45mins</p>
+                      <a href="#" class="btn btn-primary">Learn More</a>
+                    </div>
+                    <div class="card-footer"><i class="fas fa-user"></i> Melvin Loh <i class="fas fa-bookmark" data-bs-toggle="tooltip" data-bs-placement="top" title="Add to Bookmarks"></i></div>
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="card">
+                    <img src="image/group.jpeg" class="card-img-top" alt="Card Image 4" />
+                    <div class="card-body">
+                      <h5 class="card-title">Teamwork & discussion for developer</h5>
+                      <p class="card-text"><i class="fas fa-clock"></i> 4hr 45mins</p>
+                      <a href="#" class="btn btn-primary">Learn More</a>
+                    </div>
+                    <div class="card-footer"><i class="fas fa-user"></i> Melvin Loh <i class="fas fa-bookmark" data-bs-toggle="tooltip" data-bs-placement="top" title="Add to Bookmarks"></i></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+          data-bs-slide="prev">
+          <span class="carousel-control-prev-icon bg-black" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+          data-bs-slide="next">
+          <span class="carousel-control-next-icon bg-black" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+      </button>
+  </div>
+
+
+  <div id="bookmarkCanvas" class="container" style="display: none; position: absolute; bottom: -400px; left: 0; right: 0; background-color: white; height: 100px; width: 300px;">
+    <h2>Bookmarked Content</h2>
+    <div id="bookmarkedContent" class="d-flex flex-row">
+    </div>
+  </div>
+  
+  
+  
+  
+    <div class="card-footer text-muted d-flex justify-content-between py-3 mt-5 pt-5 ">
+      <div>
+        © 2021 SOI Learning Portal. All Rights Reserved.
+      </div>
+      <div>
+        Privacy&nbsp;&nbsp; Terms&nbsp;&nbsp; Feedback&nbsp;&nbsp; Support&nbsp;
+      </div>
+    </div>
+  
+
+    <script>
+$(document).ready(function () {
+
+var language = ["HTML", "CSS", "PHP", "JavaScript", "Python", "Java", "iOS", "Swift", "React", "Web Design", "Web Development"];
+
+$('#searchInput').typeahead({
+    source: language,
+    minLength: 1,
+    autoSelect: true
+});
+
+
+$('[data-bs-toggle="tooltip"]').tooltip();
+
+var isMarginAdded = false;
+
+$('.fas.fa-bookmark').on('click', function () {
+    var card = $(this).closest('.card');
+    var cardImage = card.find('.card-img-top').attr('src');
+    var cardTitle = card.find('.card-title').text();
+    var cardText = card.find('.card-text').text();
+    var cardButtonLink = card.find('.btn.btn-primary').attr('href');
+
+    var bookmarkedContent = `
+        <div class="d-flex flex-row">
+            <div class="card" style="margin-right: 10px;">
+                <img src="${cardImage}" class="card-img-top" alt="Card Image"/>
+                <div class="card-body">
+                    <h5 class="card-title">${cardTitle}</h5>
+                    <p class="card-text">${cardText}</p>
+                    <a href="${cardButtonLink}" class="btn btn-primary">Learn More</a>
+                </div>
+            </div>
+        </div>
+    `;
+
+    if (!isMarginAdded) {
+        $('#carouselExampleIndicators').addClass('carousel-with-margin');
+        isMarginAdded = true;
+    }
+
+    $('#bookmarkedContent').append(bookmarkedContent);
+    $('#bookmarkCanvas').show();
+});
+});
+
+    </script>
+
+<script>
+  $(document).ready(function() {
+    $("#userIcon").click(function() {
+      var currentColor = $(this).css("background-color");
+      var newColor = (currentColor === "rgb(128, 128, 128)") ? "green" : "gray";
+      $(this).css("background-color", newColor);
+    });
+  });
+</script>
+
+    
+
+    
+    
+  </body>
+  </html>
+  
+  
+  
+  
+  
